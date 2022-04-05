@@ -11,7 +11,7 @@ Maven 3
 
 ### Installing
 ```
-mvn package
+mvn clean package
 ```
 
 ### To run the webapp manually
