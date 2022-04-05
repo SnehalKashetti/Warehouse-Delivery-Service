@@ -22,7 +22,7 @@ mvn spring-boot:run
 
 ....and navigate your browser to  http://localhost:8080/
 
-## Adding In memory database 
+## Adding In memory database using POSTMAN
 
 Use url http://localhost:8080/api/saveDelivery by passing below json in the body.
 
