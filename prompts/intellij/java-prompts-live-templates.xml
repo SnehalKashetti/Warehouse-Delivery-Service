@@ -1,0 +1,69 @@
+<templateSet group="Team Java Prompt Library">
+  <template name="spring_scaffold_hex" value="Act as a senior Spring Boot architect.&#10;Feature: $FEATURE$&#10;Domain objects: $DOMAIN$&#10;Rules: $RULES$&#10;&#10;Deliver:&#10;- Controller + DTOs + validation&#10;- Application service + ports&#10;- Domain model (entities/value objects)&#10;- Persistence adapter (JPA/R2DBC) + mapper&#10;- ControllerAdvice&#10;- JUnit5 + Mockito + Integration tests (Testcontainers if DB)&#10;- README snippet with decisions&#10;&#10;Constraints: Java 17, Spring Boot 3.x" description="Spring / Scaffold / Hexagonal feature slice" toReformat="false" toShortenFQNames="false">
+    <variable name="FEATURE" expression="" defaultValue="Name" alwaysStopAt="true"/>
+    <variable name="DOMAIN" expression="" defaultValue="List" alwaysStopAt="true"/>
+    <variable name="RULES" expression="" defaultValue="Validation" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="true"/>
+      <option name="OTHER" value="true"/>
+    </context>
+  </template>
+
+  <template name="java_review_senior" value="You are a senior Java engineer (10+ yrs). Review for correctness, concurrency, performance, clean code, and security.&#10;&#10;Context:&#10;$CONTEXT$&#10;&#10;Deliverables:&#10;1) Summary&#10;2) Issues (High/Med/Low)&#10;3) Refactors with code&#10;4) Security notes&#10;5) Risks and migration notes" description="Java / Review / Senior" toReformat="false" toShortenFQNames="false">
+    <variable name="CONTEXT" expression="" defaultValue="paste code or files" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="true"/>
+      <option name="OTHER" value="true"/>
+    </context>
+  </template>
+
+  <template name="java_rca" value="You are a JVM debugging expert. Determine root cause and fixes.&#10;&#10;Inputs:&#10;Stack trace: $STACK$&#10;Logs: $LOGS$&#10;Code: $CODE$&#10;Env: $ENV$&#10;&#10;Output:&#10;1) Root cause hypotheses ranked&#10;2) Verification steps&#10;3) Minimal patch&#10;4) Regression test" description="Java / RCA" toReformat="false" toShortenFQNames="false">
+    <variable name="STACK" expression="" defaultValue="paste" alwaysStopAt="true"/>
+    <variable name="LOGS" expression="" defaultValue="paste" alwaysStopAt="true"/>
+    <variable name="CODE" expression="" defaultValue="paste or path" alwaysStopAt="true"/>
+    <variable name="ENV" expression="" defaultValue="Java 17, Spring Boot 3.x" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="true"/>
+      <option name="OTHER" value="true"/>
+    </context>
+  </template>
+
+  <template name="java_tests_highvalue" value="Generate JUnit 5 tests focusing on edge cases, negative paths, and parameterized tests. Use Mockito and Testcontainers where appropriate.&#10;&#10;Target classes/modules:&#10;$TARGETS$&#10;&#10;Explain test reasoning and expected coverage." description="Java / Tests / High-Value" toReformat="false" toShortenFQNames="false">
+    <variable name="TARGETS" expression="" defaultValue="paths or code" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="true"/>
+      <option name="OTHER" value="true"/>
+    </context>
+  </template>
+
+  <template name="java_perf_analyze" value="You are a Java performance engineer. Analyze performance symptoms and recommend JVM+code improvements.&#10;&#10;Symptoms/metrics:&#10;$SYMPTOMS$&#10;GC logs/heap stats:&#10;$GCLOGS$&#10;&#10;Deliverables: bottlenecks, GC config (G1/ZGC) with flags, code patches, and measurement plan." description="Java / Performance / GC" toReformat="false" toShortenFQNames="false">
+    <variable name="SYMPTOMS" expression="" defaultValue="paste" alwaysStopAt="true"/>
+    <variable name="GCLOGS" expression="" defaultValue="paste" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="true"/>
+      <option name="OTHER" value="true"/>
+    </context>
+  </template>
+
+  <template name="arch_adr_create" value="# ADR: $TITLE$&#10;Status: $STATUS$&#10;&#10;## Context&#10;$CONTEXT$&#10;&#10;## Decision&#10;$DECISION$&#10;&#10;## Consequences&#10;- $POS$&#10;- $NEG$&#10;&#10;## Alternatives Considered&#10;- $ALT1$&#10;- $ALT2$&#10;&#10;## Rollback Plan&#10;$ROLLBACK$" description="Architecture / ADR / Create" toReformat="false" toShortenFQNames="false">
+    <variable name="TITLE" expression="" defaultValue="Decision Title" alwaysStopAt="true"/>
+    <variable name="STATUS" expression="" defaultValue="Proposed" alwaysStopAt="true"/>
+    <variable name="CONTEXT" expression="" defaultValue="background" alwaysStopAt="true"/>
+    <variable name="DECISION" expression="" defaultValue="what and why" alwaysStopAt="true"/>
+    <variable name="POS" expression="" defaultValue="positive" alwaysStopAt="true"/>
+    <variable name="NEG" expression="" defaultValue="negative" alwaysStopAt="true"/>
+    <variable name="ALT1" expression="" defaultValue="Alternative A" alwaysStopAt="true"/>
+    <variable name="ALT2" expression="" defaultValue="Alternative B" alwaysStopAt="true"/>
+    <variable name="ROLLBACK" expression="" defaultValue="how to revert" alwaysStopAt="true"/>
+    <context>
+      <option name="OTHER" value="true"/>
+    </context>
+  </template>
+
+  <template name="cicd_fix_pipeline" value="You are a CI/CD specialist. Analyze the failing pipeline and improve throughput.&#10;&#10;Inputs (YAML + logs): $INPUT$&#10;&#10;Deliverables:&#10;1) Root cause&#10;2) Fixed pipeline YAML&#10;3) Optimizations (caching/parallelism/test split)&#10;4) Metrics to track" description="CI/CD / Fix / Pipeline" toReformat="false" toShortenFQNames="false">
+    <variable name="INPUT" expression="" defaultValue="paste" alwaysStopAt="true"/>
+    <context>
+      <option name="OTHER" value="true"/>
+    </context>
+  </template>
+</templateSet>

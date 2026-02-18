@@ -1,0 +1,234 @@
+{
+  "Java \u2022 Dev \u2022 Senior \u2022 Review": {
+    "prefix": "p.java.review.senior",
+    "description": "Deep review for correctness, concurrency, performance, security, and clean code.",
+    "body": [
+      "You are a senior Java engineer (10+ yrs). Review the following code for correctness, concurrency, performance, clean code, and security.",
+      "",
+      "Context:",
+      "${1:paste code or file paths}",
+      "",
+      "Deliverables:",
+      "1) Summary",
+      "2) Detailed issues (High/Med/Low) with line refs if possible",
+      "3) Refactor suggestions with code",
+      "4) Security considerations",
+      "5) Risks and migration notes"
+    ]
+  },
+  "Java \u2022 Dev \u2022 RCA": {
+    "prefix": "p.java.rca",
+    "description": "Root cause analysis with verification steps, patch, and regression test.",
+    "body": [
+      "You are a JVM debugging expert. Determine root cause and fixes.",
+      "",
+      "Inputs:",
+      "Stack trace: ${1:paste}",
+      "Logs: ${2:paste}",
+      "Code: ${3:paste or link}",
+      "Env: ${4:Java 17/Spring Boot 3.x/etc}",
+      "",
+      "Output:",
+      "1) Root cause hypotheses ranked",
+      "2) Verification steps",
+      "3) Minimal patch",
+      "4) Regression test"
+    ]
+  },
+  "Spring \u2022 Dev \u2022 Senior \u2022 Scaffold \u2022 Feature (Hex)": {
+    "prefix": "p.spring.scaffold.hex",
+    "description": "Generate a hexagonal Spring feature slice with tests.",
+    "body": [
+      "Act as a senior Spring Boot architect.",
+      "Feature: ${1:Name}",
+      "Domain objects: ${2:List}",
+      "Rules: ${3:Validation rules}",
+      "",
+      "Deliver:",
+      "- Controller + DTOs + validation",
+      "- Application service + ports",
+      "- Domain model (entities/value objects)",
+      "- Persistence adapter (JPA/R2DBC) + mapper",
+      "- ControllerAdvice",
+      "- JUnit5 + Mockito + Integration tests (Testcontainers if DB)",
+      "- README snippet with decisions",
+      "",
+      "Constraints: Java 17, Spring Boot 3.x"
+    ]
+  },
+  "Java \u2022 Dev \u2022 Tests \u2022 High-Value": {
+    "prefix": "p.java.test.highvalue",
+    "description": "High-yield JUnit 5 tests with edge/negative/parameterized cases, optionally Testcontainers.",
+    "body": [
+      "Generate JUnit 5 tests focusing on edge cases, negative paths, and parameterized tests. Use Mockito and Testcontainers where appropriate.",
+      "",
+      "Target classes/modules:",
+      "${1:paths or code}",
+      "",
+      "Explain test reasoning and expected coverage."
+    ]
+  },
+  "Java \u2022 Dev \u2022 Performance \u2022 GC": {
+    "prefix": "p.java.perf.analyze",
+    "description": "Analyze performance symptoms; propose GC config and code optimizations.",
+    "body": [
+      "You are a Java performance engineer. Analyze performance symptoms and recommend code+JVM improvements.",
+      "",
+      "Symptoms/metrics:",
+      "${1:paste}",
+      "GC logs/heap stats:",
+      "${2:paste}",
+      "",
+      "Deliverables: bottlenecks, GC config (G1/ZGC) with flags, code patches, and measurement plan."
+    ]
+  },
+  "Architecture \u2022 ADR \u2022 Create": {
+    "prefix": "p.arch.adr.create",
+    "description": "Create an ADR with context, decision, consequences, alternatives, rollback.",
+    "body": [
+      "# ADR: ${1:Decision Title}",
+      "Status: ${2:Proposed/Accepted/Rejected}",
+      "",
+      "## Context",
+      "${3:background}",
+      "",
+      "## Decision",
+      "${4:what and why}",
+      "",
+      "## Consequences",
+      "- ${5:positive}",
+      "- ${6:negative}",
+      "",
+      "## Alternatives Considered",
+      "- ${7:Alt A}",
+      "- ${8:Alt B}",
+      "",
+      "## Rollback Plan",
+      "${9:how to revert}"
+    ]
+  },
+  "CI/CD \u2022 Fix \u2022 Pipeline": {
+    "prefix": "p.cicd.fix.pipeline",
+    "description": "Fix failing pipeline and optimize caching/parallelism/test split.",
+    "body": [
+      "You are a CI/CD specialist. Analyze the failing pipeline and improve throughput.",
+      "",
+      "Inputs (YAML + logs): ${1:paste}",
+      "",
+      "Deliverables:",
+      "1) Root cause",
+      "2) Fixed pipeline YAML",
+      "3) Optimizations (caching/parallelism/test split)",
+      "4) Metrics to track"
+    ]
+  },
+  "Infra \u2022 Docker \u2022 Optimize": {
+    "prefix": "p.infra.docker.optimize",
+    "description": "Optimize Dockerfile with multi-stage builds, non-root user, and caching.",
+    "body": [
+      "Optimize this Dockerfile for image size, security, and build caching. Prefer multi-stage builds and non-root users.",
+      "",
+      "Dockerfile:",
+      "${1:paste}",
+      "",
+      "Deliverables: improved Dockerfile + rationale."
+    ]
+  },
+  "K8s \u2022 Ops \u2022 Advice \u2022 Deployment": {
+    "prefix": "p.k8s.advice.deploy",
+    "description": "Improve K8s manifests (HPA, probes, resources, resilience, observability).",
+    "body": [
+      "Analyze this Kubernetes deployment and suggest improvements for autoscaling, probes, resource requests/limits, resilience, and observability.",
+      "",
+      "Manifests:",
+      "${1:paste}",
+      "",
+      "Output: patched manifests + explanations."
+    ]
+  },
+  "Security \u2022 Audit \u2022 OWASP": {
+    "prefix": "p.sec.audit.owasp",
+    "description": "OWASP-focused review for injection/XXE/SSRF/CSRF/authz and secret leaks.",
+    "body": [
+      "You are a secure coding auditor (OWASP Top 10). Review the code for injection, XXE, SSRF, CSRF, authz gaps, and secret leaks.",
+      "",
+      "Context/code:",
+      "${1:paste}",
+      "",
+      "Deliverables: findings table, severity, fixes with minimal blast radius."
+    ]
+  },
+  "Spring \u2022 Kafka \u2022 Scaffold \u2022 DLQ": {
+    "prefix": "p.spring.scaffold.kafka-dlq",
+    "description": "Spring Kafka producer/consumer with retry/backoff, DLQ, serializers, tests.",
+    "body": [
+      "Generate Spring Boot Kafka producer and consumer scaffolding with error handling (DLQ) and retry/backoff.",
+      "",
+      "Topic(s): ${1:topic-name}",
+      "Payload schema: ${2:JSON/Avro}",
+      "",
+      "Include: configs, serializers, health checks, and tests (embedded Kafka if applicable)."
+    ]
+  },
+  "DB \u2022 Tests \u2022 Postgres + Testcontainers": {
+    "prefix": "p.db.test.pg-tc",
+    "description": "Postgres integration tests using Testcontainers with fixtures and migrations.",
+    "body": [
+      "Create Postgres integration tests using Testcontainers for the following repository/service.",
+      "",
+      "Code under test: ${1:paste}",
+      "",
+      "Deliver: container setup, schema migration (Flyway if needed), data fixtures, and assertions."
+    ]
+  },
+  "Spring \u2022 WebFlux/R2DBC \u2022 Scaffold": {
+    "prefix": "p.spring.scaffold.webflux-r2dbc",
+    "description": "Reactive WebFlux service with R2DBC, validation, error handling, and tests.",
+    "body": [
+      "Build a reactive Spring WebFlux service using R2DBC with backpressure-aware endpoints and repository implementations.",
+      "",
+      "Entities/DTOs: ${1:list}",
+      "",
+      "Include: validation, error handling, and unit + integration tests."
+    ]
+  },
+  "Spring \u2022 Security \u2022 OAuth2/Keycloak": {
+    "prefix": "p.spring.security.oauth2-keycloak",
+    "description": "Configure Spring Security (JWT resource server) for Keycloak realms/roles.",
+    "body": [
+      "Configure Spring Security with OAuth2 Resource Server (JWT) for Keycloak realms and roles. Provide configuration, security filters, and method-level @PreAuthorize examples.",
+      "",
+      "Realm/Client: ${1:info}",
+      "Scopes/Roles: ${2:list}"
+    ]
+  },
+  "Observability \u2022 Instrument \u2022 OpenTelemetry": {
+    "prefix": "p.obs.instrument.otel",
+    "description": "Micrometer/OTel metrics, JSON logs, tracing, dashboards, and alerts.",
+    "body": [
+      "Instrument this service with Micrometer/OTel metrics, structured logging (JSON), and tracing (W3C tracecontext). Provide dashboards and alerts suggestions.",
+      "",
+      "Service context: ${1:paste}"
+    ]
+  },
+  "Java \u2022 Plan \u2022 Migrate to 17": {
+    "prefix": "p.java.plan.migrate-17",
+    "description": "Migration plan from Java 8\u219217: features, deps upgrades, build changes, risks.",
+    "body": [
+      "Create a migration plan from Java 8 to Java 17 including language feature adoption (records, switch expressions, var if applicable), deps upgrades, build changes, and compatibility risks.",
+      "",
+      "Project notes: ${1:paste}"
+    ]
+  },
+  "Architecture \u2022 Refactor \u2022 Clean/Hex": {
+    "prefix": "p.arch.refactor.clean",
+    "description": "Refactor to Clean/Hex architecture with ports/adapters and reduced framework coupling.",
+    "body": [
+      "Refactor to Clean/Hexagonal architecture: separate domain, application, and infrastructure; introduce ports/adapters; reduce framework coupling.",
+      "",
+      "Target module: ${1:paste}",
+      "",
+      "Deliverables: module layout, updated code samples, and migration steps with risks."
+    ]
+  }
+}

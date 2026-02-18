@@ -1,0 +1,160 @@
+{
+  "version": "1.0",
+  "tasks": [
+    {
+      "name": "Java \u2022 Dev \u2022 Senior \u2022 Review",
+      "id": "java-dev-senior-review",
+      "tags": [
+        "java",
+        "review",
+        "senior",
+        "security",
+        "performance"
+      ],
+      "goal": "Perform a senior-level review for correctness, concurrency, performance, security, and clean code.",
+      "instructions": [
+        "ROLE: Senior Java engineer (10+ yrs).",
+        "CONTEXT: Java 17 / Spring Boot; infer conventions from repository.",
+        "PROCESS:",
+        "  1) Identify defects, concurrency risks, performance hotspots.",
+        "  2) Flag security issues and null-safety holes.",
+        "  3) Propose concrete diffs/patches.",
+        "OUTPUT: Summary, Issues (High/Med/Low), Refactors with code, Security notes, Risks."
+      ]
+    },
+    {
+      "name": "Java \u2022 Dev \u2022 RCA",
+      "id": "java-dev-rca",
+      "tags": [
+        "java",
+        "rca",
+        "debug"
+      ],
+      "goal": "Diagnose production failure and propose verified fixes.",
+      "instructions": [
+        "ROLE: JVM debugging expert + SRE partner.",
+        "INPUTS: Stack trace, logs, key classes, env details.",
+        "PROCESS:",
+        "  1) Hypothesize root causes and rank by likelihood.",
+        "  2) Map each hypothesis to evidence and verification steps.",
+        "  3) Provide failing test \u2192 fix \u2192 passing test.",
+        "OUTPUT: RCA summary, verification steps, patch, regression tests, prevention checklist."
+      ]
+    },
+    {
+      "name": "Spring \u2022 Dev \u2022 Senior \u2022 Scaffold \u2022 Feature (Hex)",
+      "id": "spring-dev-senior-scaffold-feature-hex",
+      "tags": [
+        "spring",
+        "hex",
+        "scaffold",
+        "tests"
+      ],
+      "goal": "Generate a complete feature slice using hexagonal architecture.",
+      "instructions": [
+        "ROLE: Senior Spring Boot architect.",
+        "INPUT: Feature, Domain objects, Validation rules.",
+        "DELIVERABLES:",
+        "  - Controller + DTOs + validation",
+        "  - Application service + ports",
+        "  - Domain model (entities/value objects) with invariants",
+        "  - Persistence adapter (JPA/R2DBC) + mapper",
+        "  - Exception handling (ControllerAdvice)",
+        "  - Unit tests (JUnit5 + Mockito) and integration tests (Testcontainers if DB)",
+        "  - README snippet explaining decisions",
+        "CONSTRAINTS: Java 17, Spring Boot 3.x."
+      ]
+    },
+    {
+      "name": "Java \u2022 Dev \u2022 Tests \u2022 High-Value",
+      "id": "java-dev-tests-high-value",
+      "tags": [
+        "java",
+        "tests",
+        "junit",
+        "testcontainers"
+      ],
+      "goal": "Create robust tests that maximize defect discovery per line of test code.",
+      "instructions": [
+        "ROLE: Senior test engineer.",
+        "PROCESS:",
+        "  1) Identify critical paths and edge cases.",
+        "  2) Write parameterized and negative tests.",
+        "  3) Propose Testcontainers for DB/external deps.",
+        "OUTPUT: JUnit5 tests with explanations and coverage targets."
+      ]
+    },
+    {
+      "name": "Java \u2022 Dev \u2022 Performance \u2022 GC",
+      "id": "java-dev-performance-gc",
+      "tags": [
+        "java",
+        "performance",
+        "gc",
+        "zgc",
+        "g1"
+      ],
+      "goal": "Analyze performance symptoms; propose GC configs and code hotspots fixes.",
+      "instructions": [
+        "ROLE: Java performance engineer.",
+        "INPUT: Symptoms, flamegraphs, GC logs, heap stats.",
+        "PROCESS:",
+        "  1) Identify CPU/memory/lock/I-O bottlenecks.",
+        "  2) Suggest GC configs (G1/ZGC) with rationale.",
+        "  3) Provide micro-optimizations and algorithmic improvements.",
+        "OUTPUT: Action plan, JVM flags, code patches, measurement methodology."
+      ]
+    },
+    {
+      "name": "Security \u2022 Audit \u2022 OWASP",
+      "id": "security-audit-owasp",
+      "tags": [
+        "security",
+        "owasp",
+        "audit"
+      ],
+      "goal": "Find code and dependency vulnerabilities and propose remediations.",
+      "instructions": [
+        "ROLE: Secure coding auditor (OWASP Top 10).",
+        "PROCESS:",
+        "  1) Scan for secrets, injection, XXE, SSRF, CSRF, authz gaps.",
+        "  2) Review JWT/session handling.",
+        "  3) Check Maven/Gradle dependencies for CVEs.",
+        "OUTPUT: Findings table, upgraded dependencies, patches with minimal blast radius."
+      ]
+    },
+    {
+      "name": "Architecture \u2022 ADR \u2022 Create",
+      "id": "architecture-adr-create",
+      "tags": [
+        "architecture",
+        "adr"
+      ],
+      "goal": "Produce a clean ADR for a significant decision.",
+      "instructions": [
+        "ROLE: Senior architect.",
+        "INPUT: Decision context.",
+        "OUTPUT (Markdown): Title, Status, Context, Decision, Consequences, Alternatives, Rollback Plan."
+      ]
+    },
+    {
+      "name": "CI/CD \u2022 Fix \u2022 Pipeline",
+      "id": "cicd-fix-pipeline",
+      "tags": [
+        "cicd",
+        "pipeline",
+        "optimize"
+      ],
+      "goal": "Fix failing pipelines and improve throughput.",
+      "instructions": [
+        "ROLE: CI/CD specialist.",
+        "INPUT: YAML and logs.",
+        "PROCESS:",
+        "  1) Identify root cause.",
+        "  2) Provide fixed pipeline YAML.",
+        "  3) Optimize caching, parallelism, test split, artifacts.",
+        "OUTPUT: Patched pipeline, rationale, and metrics to track."
+      ]
+    }
+  ]
+}

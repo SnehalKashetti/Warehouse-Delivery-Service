@@ -1,0 +1,88 @@
+{
+  "version": "1.0",
+  "prompts": [
+    {
+      "id": "java-dev-senior-review",
+      "prefix": "p.java.review.senior",
+      "type": "vscode,cursor,intellij",
+      "file": "vscode/java-prompts.code-snippets",
+      "tags": [
+        "java",
+        "review",
+        "senior"
+      ]
+    },
+    {
+      "id": "java-dev-rca",
+      "prefix": "p.java.rca",
+      "type": "vscode,cursor,intellij",
+      "file": "vscode/java-prompts.code-snippets",
+      "tags": [
+        "java",
+        "rca"
+      ]
+    },
+    {
+      "id": "spring-dev-senior-scaffold-feature-hex",
+      "prefix": "p.spring.scaffold.hex",
+      "type": "vscode,cursor,intellij",
+      "file": "vscode/java-prompts.code-snippets",
+      "tags": [
+        "spring",
+        "hex",
+        "scaffold"
+      ]
+    },
+    {
+      "id": "java-dev-tests-high-value",
+      "prefix": "p.java.test.highvalue",
+      "type": "vscode,cursor,intellij",
+      "file": "vscode/java-prompts.code-snippets",
+      "tags": [
+        "java",
+        "tests"
+      ]
+    },
+    {
+      "id": "java-dev-performance-gc",
+      "prefix": "p.java.perf.analyze",
+      "type": "vscode,cursor,intellij",
+      "file": "vscode/java-prompts.code-snippets",
+      "tags": [
+        "java",
+        "performance",
+        "gc"
+      ]
+    },
+    {
+      "id": "security-audit-owasp",
+      "prefix": "p.sec.audit.owasp",
+      "type": "vscode,cursor",
+      "file": "vscode/java-prompts.code-snippets",
+      "tags": [
+        "security",
+        "owasp"
+      ]
+    },
+    {
+      "id": "architecture-adr-create",
+      "prefix": "p.arch.adr.create",
+      "type": "vscode,cursor,intellij",
+      "file": "vscode/java-prompts.code-snippets",
+      "tags": [
+        "architecture",
+        "adr"
+      ]
+    },
+    {
+      "id": "cicd-fix-pipeline",
+      "prefix": "p.cicd.fix.pipeline",
+      "type": "vscode,cursor,intellij",
+      "file": "vscode/java-prompts.code-snippets",
+      "tags": [
+        "cicd",
+        "pipeline"
+      ]
+    }
+  ]
+}
